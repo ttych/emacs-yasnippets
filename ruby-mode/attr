@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: attr_reader
+# group: class
+# --
+attr_reader :$0

@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: tosa solution template
+# group: contest
+# --
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+
+require 'pp'
+
+##################################################
+
+input = Array.new
+while i = $stdin.gets
+	input << i.strip
+end
+
+##################################################
+
+def dbg(obj)
+  STDERR.puts obj.inspect
+end

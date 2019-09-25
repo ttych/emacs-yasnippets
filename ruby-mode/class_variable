@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: class variable
+# key: @@
+# --
+@@${1:variable} = $0

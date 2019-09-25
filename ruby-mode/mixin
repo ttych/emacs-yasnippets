@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: create mixin module structure
+# key: mixin
+# group: definitions
+# --
+module ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                  (file-name-sans-extension
+                                  (or (buffer-file-name)
+                                      (buffer-name (current-buffer))))))))
+                 (replace-regexp-in-string "_" "" fn t t))`}
+  def self.included(base)
+    base.extend(${2:ClassMethods})
+  end
+
+  $3
+
+  module $2
+    $0
+  end
+end
