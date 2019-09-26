@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: bang sh
+# key: #!
+# --
+#!/bin/sh
+$0
