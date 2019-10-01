@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: emacs mode comment
+# group: emacs
+# key: mode
+# --
+# -*- mode: ruby -*-

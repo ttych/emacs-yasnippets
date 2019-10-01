@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: create struct
 # group: definitions
-# key: st
+# key: Str
 # --
 Struct.new(:$1, keyword_init: ${2:true}) do
   $0
