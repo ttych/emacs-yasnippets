@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to ruby-mode
+# group : mode
+# key: torb
+# type: command
+# --
+(ruby-mode)
