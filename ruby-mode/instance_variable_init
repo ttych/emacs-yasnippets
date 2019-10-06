@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: instance variable
+# group: definition
+# key: @=
+# --
+@${1:variable} = $1
