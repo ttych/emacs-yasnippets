@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to shell-script-mode
+# group : mode
+# key: tosh
+# type: command
+# --
+(shell-script-mode)

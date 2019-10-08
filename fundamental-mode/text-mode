@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to text-mode
+# group : mode
+# key: totxt
+# type: command
+# --
+(text-mode)

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to python-mode
+# group : mode
+# key: topy
+# type: command
+# --
+(python-mode)
