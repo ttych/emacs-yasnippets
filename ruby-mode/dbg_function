@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: dbg function
+# group: debug
+# key: defdbg
+# --
+def dbg(obj)
+  STDERR.puts obj.inspect
+end
