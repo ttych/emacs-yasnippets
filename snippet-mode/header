@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: snippet header
+# key: header
+# --
+# -*- mode: snippet -*-
+# name: $1
+# key: $2
+# group: $3
+# --
+$0
