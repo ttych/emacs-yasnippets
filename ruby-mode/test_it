@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test it block
+# key: it
+# group: test
+# --
+it 'should $1' do
+$0
+end

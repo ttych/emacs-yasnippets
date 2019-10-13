@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: test describe block
+# key: describe
+# group: test
+# --
+describe $1 do
+$0
+end

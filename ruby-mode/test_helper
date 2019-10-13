@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: test helper require
+# key: helper
+# group: test
+# --
+require 'test_helper'
