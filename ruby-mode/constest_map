@@ -1,0 +1,55 @@
+# -*- mode: snippet -*-
+# name: contest map
+# key: contest_map
+# group: contest
+# --
+class Map
+  attr_reader :h, :l, :input
+  attr_reader :map, :index
+
+  def initialize(h, l, input)
+    @h = h
+    @l = l
+    @input = input
+    _load_map
+  end
+
+  def _load_map
+    @index = {}
+    @map = []
+    input.each.with_index do |line, y|
+      @map << line.split('')
+      @map.last.each.with_index do |c, x|
+        @index[c] ||= []
+        @index[c] << [y, x]
+      end
+    end
+  end
+
+  def at(y, x)
+    map[y][x]
+  end
+
+  def arround8(y, x)
+    list = []
+    (y-1..y+1).each do |a_y|
+      next if a_y < 0 || a_y >= map.size
+      (x-1..x+1).each do |a_x|
+        next if a_y == y && a_x == x
+        next if a_x < 0 || a_x >= map.first.size
+        list << at(a_y, a_x)
+      end
+    end
+    list
+  end
+
+  def arround4(y, x)
+    list = []
+    [[-1, 0], [1, 0], [0, -1], [0, 1]].each do |dir|
+      next if (y + dir[0]) < 0 || (y + dir[0]) >= map.size
+      next if (x + dir[1]) < 0 || (x + dir[1]) >= map.first.size
+      list << at(y + dir[0], x + dir[1])
+    end
+    list
+  end
+end

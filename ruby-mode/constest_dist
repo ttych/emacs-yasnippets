@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: contest 2D distance
+# key: contest_dist
+# group: contest
+# --
+def dist(a, b)
+  ((a[0] - b[0])**2 + (a[1] - b[1])**2)**0.5
+end
