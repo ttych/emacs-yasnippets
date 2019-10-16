@@ -30,26 +30,34 @@ class Map
     map[y][x]
   end
 
-  def arround8(y, x)
+  def pos_arround8(y, x)
     list = []
     (y-1..y+1).each do |a_y|
       next if a_y < 0 || a_y >= map.size
       (x-1..x+1).each do |a_x|
         next if a_y == y && a_x == x
         next if a_x < 0 || a_x >= map.first.size
-        list << at(a_y, a_x)
+        list << [a_y, a_x]
       end
     end
     list
   end
 
-  def arround4(y, x)
-    list = []
+  def arround8(y, x)
+    pos_arround8(y, x).map { |pos| at(*pos) }
+  end
+
+  def pos_arround4(y, x)
+        list = []
     [[-1, 0], [1, 0], [0, -1], [0, 1]].each do |dir|
       next if (y + dir[0]) < 0 || (y + dir[0]) >= map.size
       next if (x + dir[1]) < 0 || (x + dir[1]) >= map.first.size
-      list << at(y + dir[0], x + dir[1])
+      list << [y + dir[0], x + dir[1]]
     end
     list
+  end
+
+  def arround4(y, x)
+    pos_arround4(y, x).map { |pos| at(*pos) }
   end
 end
