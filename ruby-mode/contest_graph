@@ -1,0 +1,122 @@
+# -*- mode: snippet -*-
+# name: contest graph class
+# key: contest_graph
+# group: contest
+# --
+  class Graph
+    Edge = Struct.new(:vertex1, :vertex2, :cost) do
+      def alt_vertex(vertex)
+        vertex == vertex1 ? vertex2 : vertex1
+      end
+
+      def vertices
+        [vertex1, vertex2]
+      end
+    end
+
+    ##########################################
+
+    def self.load_from_vertices_and_edges(vertices, edges, mode: :undirected)
+      graph = new(mode: mode)
+      graph.add_vertices(vertices)
+      edges.each do |v1, v2, cost|
+        graph.add_vertices([v1, v2])
+        graph.add_edge(v1, v2, cost)
+      end
+      graph
+    end
+
+    def self.load_from_edges(edges)
+      # FIXME
+    end
+
+    def self.load_from_matrix(matrix)
+      # FIXME
+    end
+
+    ##########################################
+
+    attr_reader :mode, :vertices, :edges, :graph
+    def initialize(mode: :undirected)
+      @mode = mode
+      @vertices = Set.new
+      @edges = Set.new
+      @graph = Hash.new { |h, k| h[k] = {} }
+    end
+
+    def neighbours(vertex, whitelist: nil, blacklist: nil)
+      return [] unless vertices.include?(vertex)
+      a = graph[vertex].keys.select do |vertex|
+        if blacklist
+          !blacklist.include?(vertex)
+        elsif whitelist
+          whitelist.include?(vertex)
+        else
+          true
+        end
+      end
+    end
+    alias_method :children, :neighbours
+
+    def add_edge(vertex1, vertex2, cost)
+      edge = Edge.new(vertex1, vertex2, cost)
+      edges.add(edge)
+      graph[vertex1][vertex2] = cost
+      graph[vertex2][vertex1] = cost if mode == :undirected
+    end
+
+    def add_vertices(new_vertices)
+      vertices.merge(new_vertices)
+    end
+
+    def distance(vertex1, vertex2)
+      graph[vertex1][vertex2]
+    end
+
+    ##########################################
+
+    def shortest_path_djikstra(vertex, mode: :min, infinity: 10000)
+      parents = {vertex => nil}
+      distances = {nil => 0}
+
+      pq = PriorityQueue.new(priority_mode: mode)
+      vertices.each { |vertex| pq.add(infinity, vertex) }
+      pq.update(0, vertex)
+
+      while pq.any?
+        cur_distance = pq.priority(pq.top)
+        cur_vertex = pq.pop
+        distances[cur_vertex] = cur_distance
+
+        neighbours(cur_vertex, whitelist: pq).each do |neighbour|
+          neighbour_distance = cur_distance + distance(cur_vertex, neighbour)
+          next if neighbour_distance > pq.priority(neighbour)
+          parents[neighbour] = cur_vertex
+          pq.update(neighbour_distance, neighbour)
+        end
+      end
+
+      return parents, distances
+    end
+
+    ##########################################
+
+    def shortest_path_bellman_ford(vertex, infinity: 10000)
+      parents = {vertex => nil}
+      distances = {nil => 0}
+
+      vertices.each { |vertex| distances[vertex] = infinity }
+      distances[vertex] = 0
+
+      vertices.size.times do |pass|
+        edges.each do |edge|
+          next if distances[edge.vertex2] <= distances[edge.vertex1] + edge.cost
+          raise 'cycle' if pass == vertices.size - 1
+          distances[edge.vertex2] = distances[edge.vertex1] + edge.cost
+          parents[edge.vertex2] = edge.vertex1
+        end
+      end
+
+      return parents, distances
+    end
+  end

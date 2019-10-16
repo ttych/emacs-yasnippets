@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: contest load matrix from input
+# key: contest_load_matrix_with_index
+# group: contest
+# --
+def load_matrix_with_index(input)
+  map = []
+  index = {}
+  input.each.with_index do |line, y|
+    map << line.split('')
+    map.last.each.with_index do |c, x|
+      index[c] ||= Set.new
+      index[c] << [y, x]
+    end
+  end
+  return map, index
+end

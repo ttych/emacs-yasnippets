@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: test helper require
-# key: helper
+# key: test_helper
 # group: test
 # --
 require 'test_helper'

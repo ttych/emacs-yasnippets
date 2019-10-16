@@ -1,0 +1,182 @@
+# -*- mode: snippet -*-
+# name: contest priority queue
+# key: contest_priority_queue
+# group: contest
+# --
+  class PriorityQueue
+    class Element
+      attr_reader :data
+      attr_accessor :priority
+
+      def initialize(data:, priority:)
+        @data = data
+        @priority = priority
+      end
+
+      def hash
+        data.hash
+      end
+
+      def eql?(other)
+        return true if other.equal?(self)
+        return false unless other.is_a?(self.class)
+
+        data.eql?(other.data)
+      end
+
+      def ==(other)
+        return true if other.equal?(self)
+        return false unless other.is_a?(self.class)
+
+        data == other.data
+      end
+    end
+
+    PRIORITY_MAX = ->(prio1, prio2) { prio1 >= prio2 }
+    PRIORITY_MIN = ->(prio1, prio2) { prio1 <= prio2 }
+
+    def initialize(priority_mode: :max)
+      @queue = []
+      @elements_data_index = {}
+      @priority_check = priority_mode == :min ? PRIORITY_MIN : PRIORITY_MAX
+    end
+
+    def empty?
+      queue.empty?
+    end
+
+    def any?
+      queue.any?
+    end
+
+    def size
+      queue.size
+    end
+    alias length size
+
+    def push(priority, element_data)
+      unless include?(element_data)
+        element = Element.new(data: element_data, priority: priority)
+        queue << element
+        element_index = queue.size - 1
+        elements_data_index[element_data] = element_index
+        _balance_up(element_index)
+      end
+      self
+    end
+    alias enq push
+    alias << push
+    alias add push
+
+    def include?(element_data)
+      elements_data_index.include?(element_data)
+    end
+
+    def top
+      return nil if queue.empty?
+
+      queue.first.data
+    end
+
+    def clear
+      queue.clear
+      elements_data_index.clear
+    end
+
+    def pop
+      return nil if queue.empty?
+
+      to_pop = queue.first
+      elements_data_index.delete(to_pop.data)
+
+      return queue.pop.data if size == 1
+
+      queue[0] = queue.pop
+      elements_data_index[top] = 0
+      _balance_down(0)
+
+      to_pop.data
+    end
+
+    def update(new_priority, element_data)
+      return false unless include?(element_data)
+
+      element_index = elements_data_index[element_data]
+      element = queue[element_index]
+
+      element.priority = new_priority
+
+      _balance_up(element_index)
+      _balance_down(element_index)
+    end
+
+    def priority(element_data)
+      return nil unless include?(element_data)
+
+      queue[elements_data_index[element_data]].priority
+    end
+
+    private
+
+    attr_reader :queue, :elements_data_index, :priority_check
+
+    def _balance_up(index)
+      while index > 0
+        parent_index = _parent_index(index)
+        break if _priority?(parent_index, index)
+
+        _swap(parent_index, index)
+        index = parent_index
+      end
+    end
+
+    def _balance_down(index)
+      while index <= _parent_index(size - 1)
+        selected_index = nil
+        _child_indexes(index).each do |child_index|
+          next if child_index >= size
+          next if _priority?(index, child_index)
+
+          unless selected_index && _priority?(selected_index, child_index)
+            selected_index = child_index
+          end
+        end
+        break unless selected_index
+
+        _swap(index, selected_index)
+        index = selected_index
+      end
+    end
+
+    def _priority?(index1, index2)
+      priority_check.call(queue[index1].priority, queue[index2].priority)
+    end
+
+    def _swap(index1, index2)
+      element1 = queue[index1]
+      element2 = queue[index2]
+
+      queue[index1] = element2
+      elements_data_index[element2.data] = index1
+
+      queue[index2] = element1
+      elements_data_index[element1.data] = index2
+    end
+
+    def _parent_index(index)
+      (index - 1) / 2
+    end
+
+    def _left_child_index(index)
+      2 * index + 1
+    end
+
+    def _right_child_index(index)
+      2 * index + 2
+    end
+
+    def _child_indexes(index)
+      [_left_child_index(index),
+       _right_child_index(index)]
+    end
+  end
