@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: contest load matrix from input
+# key: contest_load_matrix
+# group: contest
+# --
+def load_matrix(input)
+  map = []
+  input.each.with_index do |line, y|
+    map << line.split('')
+  end
+  map
+end
