@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to org-mode
+# group : mode
+# key: toorg
+# type: command
+# --
+(org-mode)
