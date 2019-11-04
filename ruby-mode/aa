@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: attr_accessor
+# group: class
+# key: aa
+# --
+attr_accessor :$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: attr_writter
+# group: class
+# key: aw
+# --
+attr_writter :$0
