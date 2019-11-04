@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: memo equality
+# group: memo
+# --
+# Object equality by id
+# SHOULD NEVER BE REDEFINED
+def equal?(other)
+end
+
+# Object equality by value/cotent
+def ==(other)
+  name == other.name
+end
+
+# Object hash equality
+def eql?(other)
+end
+
+# Object case matcher/equality
+def ===(other)
+end
