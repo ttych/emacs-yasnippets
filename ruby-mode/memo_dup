@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: memo clone vs dup
+# group: memo
+# --
+# Clone:
+#   copy the object as it is
+#   shallow copy
+# Dup:
+#   copy the object ignoring its special attributes
+#   shallow copy
+# Special attributes:
+#   - Frozen status
+#   - Tainted status
+#   - Singleton class
