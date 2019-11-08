@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: pry debug
+# group: debug
+# --
+require 'pry'; binding.pry
