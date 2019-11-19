@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: basic org file header
+# group: header
+# --
+#+TITLE: $1
+#+AUTHOR: $2
+#+STARTUP: ${3:content}
