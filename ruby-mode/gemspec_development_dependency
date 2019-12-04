@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: spec.add_development_dependency
+# key: ddep
+# group: gemspec
+# --
+spec.add_development_dependency '$1', '~> ${0:x.x}'
