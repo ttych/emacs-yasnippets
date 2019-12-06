@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: around method
+# key: def_around
+# group: block
+# --
+def ${1-around}${2:(${3:args})}
+  begin
+    ${4-before}
+    yield
+    ${5-after}
+  rescue
+    ${6-exception}
+    raise
+  end
+end
