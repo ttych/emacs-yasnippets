@@ -3,7 +3,7 @@
 # key: def_around
 # group: block
 # --
-def ${1-around}${2:(${3:args})}
+def ${1-do_around}${2:(${3:args})}
   begin
     ${4-before}
     return_value = yield

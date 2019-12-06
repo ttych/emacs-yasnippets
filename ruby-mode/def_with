@@ -3,7 +3,7 @@
 # key: def_with
 # group: block
 # --
-def ${1-with}${2:(${3:args})}
+def ${1-with_something}${2:(${3:args})}
   ${4-item} = ${5-Item.new}
   begin
     yield($4)
