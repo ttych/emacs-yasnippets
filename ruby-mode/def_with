@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: context method
+# key: def_with
+# group: block
+# --
+def ${1-with}${2:(${3:args})}
+  ${4-item} = ${5-Item.new}
+  begin
+    yield($4)
+  ensure
+    $4.${5-close}
+  end
+end
