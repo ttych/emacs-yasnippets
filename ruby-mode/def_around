@@ -6,8 +6,9 @@
 def ${1-around}${2:(${3:args})}
   begin
     ${4-before}
-    yield
+    return_value = yield
     ${5-after}
+    return_value
   rescue
     ${6-exception}
     raise
