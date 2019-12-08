@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: define FALSE and TRUE
+# key: FALSE
+# group: base
+# --
+TRUE()
+{
+    return 0
+}
+
+FALSE()
+{
+    return 1
+}
