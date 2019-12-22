@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: test with minitest
+# key: minitest
+# group: test
+# --
+require "minitest/autorun"
+
+class ${1:`(let ((fn (capitalize (file-name-nondirectory
+                                     (file-name-sans-extension
+                                     (or (buffer-file-name)
+                                         (buffer-name (current-buffer))))))))
+                    (replace-regexp-in-string "_" "" fn t t))`} < Minitest::Test
+  def setup
+    $2
+  end
+
+  def test_${3:something}
+    $0
+  end
+end

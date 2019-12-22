@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: const_missing template
+# key: const_missing
+# group: hook
+# --
+def self.const_missing(name)
+  $0
+end
