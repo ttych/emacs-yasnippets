@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: memo on ruby quality
+# key: memo_quality
+# group: memo
+# --
+# rubocop      : Ruby static code analyzer, based on the community Ruby style guide.
+# reek         : Detects code smells like coupling, clumping, large areas, short names.
+# cane         : Code quality threshold checking as part of your build.
+# flay         : Analyzes code for structural similarities to find areas for refactoring.
+# flog         : Scores an ABC complexity metric: Assignments, Branches, Calls.
+# roodi        : Ruby Object Oriented Design Inferometer: parses code to warn on design issues.
+# sandi_meter  : Static analysis tool for checking Ruby code for Sandi Metz' rules.
+# laser        : LASER: Lexically- and Semantically-Enriched Ruby bug detector.
+# debt_ceiling : Scores a technical debt metric and manages debt reduction.
+# heckle       : Perturbs our tests to ensure they are working correctly.
+# churn        : Detects code that changes often for us to review, refactor, retest.
+# brakeman     : Detects security vulnerabilities in Rails apps via static analysis.
+# bullet       : Detects database N+1 queries, unused eager loading, and counter cache needs.
+# rails_best_practices : parse codes in vendor, spec, test and features directories. [Retired; less-maintained]
+# coveralls    : Web service to track code coverage over time.
+# rubycritic   : Reporter that wraps gems such as Reek, Flay and Flog.
+# simplecov           : Code coverage analyzer for Ruby 1.9+
+# simplecov-html      : HTML output formatter for SimpleCov.
+# simplecov-rcov-text : Text output formatter for SimpleCov. [Outdated]
+# metrical     : Executes MetricFu separate from your project's dependencies. [requires newer metric_fu]
+# metric_fu    : Meta-analytics that runs churn, reek, roodi, etc. and graphs results.
