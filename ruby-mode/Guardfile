@@ -1,0 +1,70 @@
+# -*- mode: snippet -*-
+# name: Guardfile
+# key: Guardfile
+# group: Guardfile
+# --
+# rubocop:disable Style/RegexpLiteral, Metrics/BlockLength
+
+def minitest_files_for(file_name, base_directories = [])
+  base_directories = Array(base_directories)
+  case file_name
+  when /.*_test/, /test_.*/
+    base_directories.each_with_object([]) do |base_directory, accumulator|
+      accumulator << "#{base_directory}#{file_name}.rb"
+    end
+  else
+    base_directories.each_with_object([]) do |base_directory, accumulator|
+      accumulator << "#{base_directory}#{file_name}_test.rb"
+      accumulator << "#{base_directory}test_#{file_name}.rb"
+    end
+  end
+end
+
+scope group: :red_green_refactor
+
+group :red_green_refactor, halt_on_fail: true do
+  guard :bundler do
+    watch('Gemfile')
+  end
+
+  guard :minitest, failed_mode: :keep,
+                   all_after_pass: true,
+                   test_folders: %w[.],
+                   include: %w[lib test] do
+    watch(%r{^test/test_helper\.rb$}) { 'test' }
+    watch(%r{^(test/|lib/)?(.*/)?(\w+).rb$}) do |m|
+      case m[1]
+      when 'test/'
+        minitest_files_for(m[3], "./test/#{m[2]}")
+      when 'lib/'
+        minitest_files_for(m[3], ["./lib/#{m[2]}", "./test/#{m[2]}"])
+      else
+        minitest_files_for(m[3], "./#{m[2]}")
+      end
+    end
+  end
+
+  guard :rubocop do
+    watch(%r{^Gemfile$})
+    watch(%r{^Guardfile$})
+    watch(%r{^Rakefile$})
+    watch(%r{.+\.rb$})
+    watch(%r{(?:.+/)?\.rubocop(?:_todo)?\.yml$}) { |m| File.dirname(m[0]) }
+  end
+
+  guard :reek do
+    watch(%r{.+\.rb$})
+    watch('.reek')
+  end
+
+  guard :shell do
+    watch(%r{(.*/)?.+\.rb$}) do |m|
+      if File.file?(m[0])
+        `git add #{m[0]}`
+        `echo "#{m[0]} stagged in git."`
+      end
+    end
+  end
+end
+
+# rubocop:enable Style/RegexpLiteral, Metrics/BlockLength

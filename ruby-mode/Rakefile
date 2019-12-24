@@ -1,0 +1,49 @@
+# -*- mode: snippet -*-
+# name: Rakefile
+# key: Rakefile
+# group: Rakefile
+# --
+require 'rake/testtask'
+require 'rubocop/rake_task'
+require 'reek/rake/task'
+require 'flog_task'
+require 'flay_task'
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.libs << '.'
+  t.test_files = FileList['**/*_test.rb']
+end
+
+Rake::TestTask.new(:bench) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.libs << '.'
+  t.test_files = FileList['**/*_benchmark.rb']
+end
+
+RuboCop::RakeTask.new(:rubocop)
+
+Reek::Rake::Task.new do |t|
+  # t.config_file = 'config.reek'
+  # t.source_files = '**/*.rb'
+  t.reek_opts = '--sort-by smelliness --no-progress -s'
+end
+
+FlayTask.new do |t|
+  t.verbose = true
+  t.dirs = %w[.]
+end
+
+FlogTask.new do |t|
+  t.verbose = true
+  t.threshold = 200
+  t.dirs = %w[.]
+end
+
+task quality: %i[rubocop reek flay flog]
+
+task all: %i[test quality]
+
+task default: %i[test rubocop]
