@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to snippet-mode
+# key: tosnippet
+# group: mode
+# type: comand
+# --
+(snippet-mode)
