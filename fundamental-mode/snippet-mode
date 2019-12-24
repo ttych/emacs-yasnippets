@@ -2,6 +2,6 @@
 # name: to snippet-mode
 # key: tosnippet
 # group: mode
-# type: comand
+# type: command
 # --
 (snippet-mode)
