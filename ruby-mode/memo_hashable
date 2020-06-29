@@ -1,0 +1,39 @@
+# -*- mode: snippet -*-
+# name: memo hashable
+# key: memo_hashable
+# group: memo
+# --
+class Node
+  attr_reader :id, :data
+
+  def initialize(id, data)
+    @id = id
+    @data = data
+  end
+
+  def ==(other)
+    return true if other.equal?(self)
+    return false unless other.kind_of?(self.class)
+    id == other.id && data == other.data
+  end
+
+  def hash
+    id.hash ^ data.hash
+  end
+
+  def eql?(other)
+    return true if other.equal?(self)
+    return false unless other.kind_of?(self.class)
+    id.eql?(other.id) && data.eql?(other.data)
+  end
+end
+
+
+n1 = Node.new(1, [:a, :b])
+n2 = Node.new(1, [:b, :c])
+
+h = {}
+h[n1] = 1
+h[n2] = 2
+puts h[n1]
+puts h[n2]

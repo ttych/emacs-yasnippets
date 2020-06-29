@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: spec.add_runtime_dependency
-# key: rdep
+# key: ard
 # group: gemspec
 # --
 spec.add_runtime_dependency '$1', '~> ${0:x.x}'
