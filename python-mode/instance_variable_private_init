@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: instance variable init
+# group: definition
+# key: s_=
+# --
+self._${1:variable} = $1
