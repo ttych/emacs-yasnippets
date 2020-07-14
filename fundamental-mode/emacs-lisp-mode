@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to emacs-lisp-mode
+# group : mode
+# key: toel
+# type: command
+# --
+(emacs-lisp-mode)
