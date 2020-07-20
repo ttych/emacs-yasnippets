@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to rst-mode
+# group : mode
+# key: torst
+# type: command
+# --
+(rst-mode)
