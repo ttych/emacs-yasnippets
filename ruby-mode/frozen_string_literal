@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: frozen_string_literal
+# group: quality
+# key: fsl
+# --
+# frozen_string_literal: ${1:true}
+
+$0
