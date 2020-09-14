@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: RSpec let definition
+# key: let
+# group: RSpec
+# --
+let(:$1) { $0 }
