@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: Gemfile source
-# key: gem
+# key: gemsrc
 # group: Gemfile
 # --
 source 'https://rubygems.org'
