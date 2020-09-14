@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Quality Gems
+# key: gemqa
+# group: Gemfile
+# --
+gem 'flay'
+gem 'flog'
+gem 'reek'
+gem 'rubocop'
