@@ -4,4 +4,5 @@
 # --
 #+TITLE: $1
 #+AUTHOR: $2
-#+STARTUP: ${3:content}
+#+DATE: $3
+#+STARTUP: ${4:content}
