@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: require 'rails_helper'
+# key: rhelper
+# group: test
+# --
+require 'rails_helper'
