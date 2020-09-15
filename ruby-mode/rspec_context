@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: RSpec context block
+# key: context
+# group: test
+# --
+context "${1:with ...}" do
+  $0
+end

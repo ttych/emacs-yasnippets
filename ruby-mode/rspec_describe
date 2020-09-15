@@ -4,5 +4,5 @@
 # group: test
 # --
 describe $1 do
-$0
+  $0
 end

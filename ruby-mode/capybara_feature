@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Capybara feature block
+# key: feature
+# group: test
+# --
+feature $1 do
+  $0
+end

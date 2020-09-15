@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Capybara scenario
+# key: scenario
+# group: test
+# --
+scenario 'should $1' do
+$0
+end
