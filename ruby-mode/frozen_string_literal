@@ -4,5 +4,3 @@
 # key: fsl
 # --
 # frozen_string_literal: ${1:true}
-
-$0
