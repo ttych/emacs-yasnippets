@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: when w
+# name: When line
+# key: w
+# group: Gherkin
+# --
+When $1
+$0

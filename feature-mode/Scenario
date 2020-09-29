@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: Scenario
+# name: Scenario declaration
+# key: Scenario
+# group: Gherkin
+# --
+Scenario: $1
+  Given $2
+  When $3
+  Then $4

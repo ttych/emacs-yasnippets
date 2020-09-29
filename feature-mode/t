@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: then t
+# name: Then line
+# key: t
+# group: Gherkin
+# --
+Then $1
+$0$>

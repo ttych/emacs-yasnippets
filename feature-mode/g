@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: given g
+# name: Given line
+# key: g
+# group: Gherkin
+# --
+Given $1
+$0

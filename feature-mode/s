@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: scenario s
+# name: Scenario line
+# key: s
+# group: Gherkin
+# --
+Scenario: $1
+  $0
