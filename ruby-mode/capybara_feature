@@ -3,6 +3,6 @@
 # key: feature
 # group: test
 # --
-feature $1 do
+feature '$1' do
   $0
 end

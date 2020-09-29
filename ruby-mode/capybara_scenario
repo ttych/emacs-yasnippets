@@ -3,6 +3,6 @@
 # key: scenario
 # group: test
 # --
-scenario 'should $1' do
+scenario '$1' do
 $0
 end
