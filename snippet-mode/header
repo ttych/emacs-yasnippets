@@ -1,10 +1,12 @@
 # -*- mode: snippet -*-
+# uuid: header
 # name: snippet header
 # key: header
 # --
 # -*- mode: snippet -*-
-# name: $1
-# key: $2
-# group: $3
+# uuid: $1
+# name: $2
+# key: $3
+# group: $4
 # --
 $0
