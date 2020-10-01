@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# uuid: describe:desc
+# name: test describe block
+# key: desc
+# group: test
+# --
+describe $1 do
+  $0
+end

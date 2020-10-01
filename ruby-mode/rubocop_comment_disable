@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# uuid: rubocop:comment:disable
+# name: Rubocop comment to disable
+# key: rb_dis
+# group: Quality
+# --
+# rubocop:disable ${0:Metrics/BlockLength}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# uuid: expect
+# name: RSpec expect statement
+# key: expect
+# group: test
+# --
+expect($1).to $0

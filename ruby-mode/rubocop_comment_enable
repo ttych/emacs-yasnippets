@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# uuid: rubocop:comment:enable
+# name: Rubocop comment to enable
+# key: rb_ena
+# group: Quality
+# --
+# rubocop:enable ${0:Metrics/BlockLength}
