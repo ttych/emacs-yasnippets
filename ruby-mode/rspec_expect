@@ -4,4 +4,4 @@
 # key: expect
 # group: test
 # --
-expect($1).to $0
+expect($1).${2:to} $0
