@@ -4,4 +4,4 @@
 # key: expect
 # group: test
 # --
-expect($1).${2:to} $0
+expect($1).${2:to} ${3:receive($4)${5:.with($6)}}

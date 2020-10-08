@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# uuid: allow
+# name: RSpec allow statement
+# key: allow
+# group: test
+# --
+allow($1).to receive($2)${3:.and_return ($4)}
