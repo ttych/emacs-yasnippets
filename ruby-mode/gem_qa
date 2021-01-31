@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: Quality Gems
-# key: gemqa
+# key: gem_qa
 # group: Gemfile
 # --
 gem 'flay'
