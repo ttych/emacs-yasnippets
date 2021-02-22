@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: notes
+# name: notes
+# key: notes
+# group: asciidoc
+# --
+[.notes]
+--
+$0
+--
