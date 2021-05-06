@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to restclient-mode
+# group : mode
+# key: torest
+# type: command
+# --
+(restclient-mode)
