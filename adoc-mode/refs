@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# uuid: refs
+# name: refs
+# key: refs
+# group: asciidoc
+# --
+[.refs]
+--
+$0
+--
