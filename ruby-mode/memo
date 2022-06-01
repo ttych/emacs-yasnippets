@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# uuid: memo
+# name: memo
+# key: memo
+# group: memo
+# --
+### Memo:
+#
+# memo_clone
+#
+# memo_dup
+#
+# memo_equality
+#
+# memo_hashable
+#
+# memo_quality
+#
