@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: dbg
+# group: debug
+# key: dbg
+# --
+require 'byebug'
+byebug
