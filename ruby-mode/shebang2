@@ -1,5 +1,5 @@
 # -*- mode: snippet -*-
-# name: /usr/bin/env -S ruby -wU
+# name: shebang +
 # group : general
 # key: #!!
 # --
