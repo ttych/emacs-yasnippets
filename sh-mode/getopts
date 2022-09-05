@@ -6,7 +6,7 @@
 # --
 OPTIND=1
 while getopts ${1::v} ${2:opt}; do
-$>    case $2 in
+$>    case \$$2 in
 $>        ${3:v) ;;}
 $>    esac
 done
