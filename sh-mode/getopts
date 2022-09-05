@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: getopts_block
+# name: getopts block
+# key: getopts
+# group: args
+# --
+OPTIND=1
+while getopts ${1::v} ${2:opt}; do
+$>    case $2 in
+$>        ${3:v) ;;}
+$>    esac
+done
+shift $(($OPTIND - 1))
+$0
