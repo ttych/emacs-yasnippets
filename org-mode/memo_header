@@ -1,0 +1,25 @@
+# -*- mode: snippet -*-
+# uuid: org_memo_header
+# name: memo_header
+# key: memo_header
+# group: org memo
+# --
+
+
+#+STARTUP: overview
+#+STARTUP: content
+#+STARTUP: showall
+#+STARTUP: show2levels
+#+STARTUP: show3levels
+#+STARTUP: show4levels
+#+STARTUP: show5levels
+#+STARTUP: showeverything
+
+
+overview         top-level headlines only
+content          all headlines
+showall          no folding of any entries
+showeverything   show even drawer contents
+
+#+STARTUP: fold              (or `overview', this is equivalent)
+#+STARTUP: nofold            (or `showall', this is equivalent)
