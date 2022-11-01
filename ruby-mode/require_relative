@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: _require_relative
+# key: rqr
+# group: code
+# --
+require_relative '$0'
