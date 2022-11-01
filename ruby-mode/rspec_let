@@ -3,4 +3,5 @@
 # key: let
 # group: RSpec
 # --
-let(:$1) { $0 }
+let(:$1) { $2 }
+$0
