@@ -5,4 +5,4 @@
 #+TITLE: $1
 #+AUTHOR: $2
 #+DATE: $3
-#+STARTUP: ${4:content}
+#+STARTUP: ${4:show3levels}
