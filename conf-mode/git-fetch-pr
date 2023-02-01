@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# uuid: git_fetch_pr
+# name: git fetch pr
+# key: git_fetch_pr
+# group: git
+# --
+fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
