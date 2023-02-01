@@ -4,4 +4,4 @@
 # key: git_fetch_pr
 # group: git
 # --
-fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+fetch = +refs/pull/*/head:refs/remotes/${1:origin}/pr/*
