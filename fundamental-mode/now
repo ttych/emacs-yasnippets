@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: now
+# key: now
+# group: time
+# type: snippet
+# contributor: ttych
+# --
+`(current-time-string)`
