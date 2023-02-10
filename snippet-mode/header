@@ -8,5 +8,7 @@
 # name: $2
 # key: $3
 # group: $4
+# type: ${5:snippet}
+# contributor: $6
 # --
 $0
