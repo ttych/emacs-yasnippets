@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: pass template
+# key: pass
+# group: pass
+# type: snippet
+# contributor: ttych
+# --
+${1:p4ssw0rd}
+URL: ${2:*.amazon.com/*}
+Username: ${3:AmazonianChicken@example.com}
