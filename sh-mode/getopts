@@ -1,8 +1,7 @@
 # -*- mode: snippet -*-
-# uuid: getopts_block
 # name: getopts block
-# key: getopts
-# group: args
+# key: getopts_block
+# group: shell
 # --
 OPTIND=1
 while getopts ${1::v} ${2:opt}; do
