@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: binding.irb
+# key: birb
+# group: debug
+# type: snippet
+# --
+binding.irb
