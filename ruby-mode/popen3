@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: popen3
+# name: popen3
+# key: popen3
+# group: process
+# type: snippet
+# --
+stdin, stdout, stderr, wait_thr = Open3.popen3(cmd, options)
+stdin.close
+captured_stdout = stdout.read
+stdout.close
+captured_stderr = stderr.read
+stderr.close
+exit_status = wait_thr.value

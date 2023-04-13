@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# uuid: capture3
+# name: capture3
+# key: capture3
+# group: process
+# type: snippet
+# --
+stdout, stderr, exit_status = Open3.capture3(cmd, **options)
