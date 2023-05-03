@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# uuid: task_coverage
+# name: Coverage task
+# key: task_coverage
+# group: Rakefile
+# --
+desc 'Run test with simplecov'
+task :coverage do |t|
+  ENV['SIMPLE_COV'] = '1'
+  Rake::Task["test"].invoke
+end
+$0

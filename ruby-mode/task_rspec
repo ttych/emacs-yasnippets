@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# uuid: task_rspec
+# name: RSpec task
+# key: task_rspec
+# group: Rakefile
+# type: snippet
+# --
+require "rspec/core/rake_task"
+
+RSpec::Core::RakeTask.new(:spec)
+
+${2:task default: %i[spec]}
+$0

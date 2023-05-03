@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Rakefile task
+# key: task
+# group: Rakefile
+# type: snippet
+# --
+task ${1:name}: ${2:[:prereq1, :prereq2]} do |t|
+     $0
+end

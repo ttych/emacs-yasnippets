@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# uuid: rake_minitest
-# name: Rake minitest task
-# key: rake_minitest
+# uuid: task_test
+# name: Task test task
+# key: task_test
 # group: Rakefile
 # type: snippet
 # --

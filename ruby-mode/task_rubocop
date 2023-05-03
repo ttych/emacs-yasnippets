@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# uuid: rake_rubocop
-# name: Rake rubocop task
-# key: rake_rubocop
+# uuid: task_rubocop
+# name: Task rubocop task
+# key: task_rubocop
 # group: Rakefile
 # type: snippet
 # --

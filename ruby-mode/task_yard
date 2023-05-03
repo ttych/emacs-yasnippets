@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# uuid: rake_yard
-# name: Rake yard task
-# key: rake_yard
+# uuid: task_yard
+# name: Task yard task
+# key: task_yard
 # group: Rakefile
 # type: snippet
 # --
