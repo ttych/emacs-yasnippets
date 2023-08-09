@@ -1,12 +1,12 @@
 # -*- mode: snippet -*-
 # name: getopts block
-# key: getopts_block
+# key: opts
 # group: shell
 # --
 OPTIND=1
-while getopts ${1::v} ${2:opt}; do
+while getopts ${1::h} ${2:opt}; do
 $>    case \$$2 in
-$>        ${3:v) ;;}
+$>        ${3:h) ;;}
 $>    esac
 done
 shift $(($OPTIND - 1))
