@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: def suppress
+# key: def_suppress
+# group: utils
+# type: snippet
+# --
+
+def suppress(exception)
+  yield if block_given?
+rescue exception
+end
