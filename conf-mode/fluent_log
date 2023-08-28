@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# uuid: fluent_log
+# name: label @FLUENT_LOG
+# key: fluent_log
+# group: fluentd
+# type: snippet
+# contributor:
+# --
+<label @FLUENT_LOG>
+  <match fluent.*>
+    @type ${1:stdout}
+    $0
+  </match>
+</label>
