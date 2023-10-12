@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: LaTeX
+# key: latex
+# group: LaTeX
+# type: snippet
+# --
+\LaTeX{$1} $0

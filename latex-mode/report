@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: full template of report class
+# key: report
+# --
+\documentclass[${1:a4paper}${2:, 12pt}]{report}
+
+\author{$3}
+
+\begin{document}
+$0
+\end{document}
