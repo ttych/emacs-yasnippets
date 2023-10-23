@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: \textcolor
+# key: textcolor
+# group: LaTeX
+# type: snippet
+# --
+\textcolor{${1:red}}{${2:text}}

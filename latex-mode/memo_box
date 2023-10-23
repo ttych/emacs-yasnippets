@@ -1,0 +1,51 @@
+# -*- mode: snippet -*-
+# name: memo box
+# key: memo_box
+# group: LaTeX
+# type: snippet
+# --
+
+% \width : box width
+% \height : box height
+% \depth : box depth
+% \totalheight : \height + \depth
+%
+%%% framebox
+% \framebox[width][pos]{text}
+% pos:
+%  l : align text left
+%  r : align text right
+%  s : spread text
+% width: 13pt, 215mm, ...
+%  1cm
+%  45mm
+%  13pt
+%  \width
+%  2\width
+%  \linewidth
+%
+%%% fbox
+% \fbox{text}
+% shortcut for framebox with default option (adjusted, centered)
+%
+%%% makebox
+% == framebox without border
+% framebox is based on makebox
+%
+%%% parbox
+% \parbox[ext][height][int]{width}{text}
+%  ext: alignment with base line
+%   m : center alignment (default)
+%   b : botton alignment
+%   t : top alignment
+%  int: internal alignment
+%   b : align bottom
+%   t : align top
+%   c : vertically centered (default)
+%   s : stretched
+%
+%%% minipage
+% \begin{minipage}[ext][height][int]{width}
+%   text
+% \end{minipage}
+%

@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: memo documentclass
+# key: memo_documentclass
+# group: LaTeX
+# type: snippet
+# --
+
+
+| class   | usage      | sections           | extension |
+|---------+------------+--------------------+-----------|
+| book    | real books | part, chapter, ... | memoir    |
+| report  |            |                    |           |
+| article |            | section, ...       |           |
+| slides  |            |                    | beamer    |
+| letter  |            |                    |           |

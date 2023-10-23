@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: minipage
+# key: minipage
+# group: LaTeX
+# type: snippet
+# --
+\begin{minipage}${1:[${2:ext}]${3:[height]}${4:[int]}}{${5:\linewidth}}
+${6:text}
+\end{minipage}
+$0

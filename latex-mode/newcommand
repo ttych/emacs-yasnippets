@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: \newcommand
+# key: newcommand
+# group: LaTeX
+# type: snippet
+# --
+\newcommand{${1:\command_name}}[${2:arg_count}]{${3:command{#1}}}
+$0

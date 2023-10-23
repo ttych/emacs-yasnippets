@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: memo table
+# key: memo_table
+# group: LaTeX
+# type: snippet
+# --
+%%% preambule
+% to inscrease space in table
+%\renewcommand{\arraystretch}{1.3}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: textit
+# key: i
+# group: LaTeX
+# type: snippet
+# --
+\textit{$1}$0

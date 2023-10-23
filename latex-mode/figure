@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: figure environment
+# key: figure
+# group: LaTeX
+# type: snippet
+# --
+\begin{figure}[${1:!h}]
+  \centering
+  \includegraphics[width = ${2:0.5\linewidth}]{${3:image.jpg}}
+  \caption{${4:Caption !}}
+\end{figure}
+$0

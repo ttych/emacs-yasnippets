@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: texts1
+# key: ts1
+# group: LaTeX
+# type: snippet
+# --
+\texts1{$1}$0

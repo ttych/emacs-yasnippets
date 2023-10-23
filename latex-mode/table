@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: table environment
+# key: table
+# group: LaTeX
+# type: snippet
+# --
+\begin{table}
+\centering
+\caption{${1:Table Legend}}
+\begin{tabular}{${2:ccc}}
+$0 1 & 2 & 3 \\\\ \hline
+4 & LaTeX{}
+\end{tabular}
+\end{table}

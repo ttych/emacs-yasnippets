@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: usepackage hyperref
+# key: pkgref
+# group: LaTeX
+# type: snippet
+# --
+\usepackage[hyphens]{url}
+% https://www.ctan.org/pkg/hyperref
+\usepackage[pdfauthor = {{Prénom Nom}}, pdftitle = {{Titre document}}, pdfstartview = Fit, pdfpagelayout = SinglePage, pdfnewwindow = true, bookmarksnumbered = true, breaklinks, colorlinks, linkcolor = red, urlcolor = black, citecolor = cyan, linktoc = all]{hyperref}
+
+%% table of contents
+{
+  \hypersetup{hidelinks}
+  \renewcommand{\contentsname}{Sommaire}
+  \tableofcontents
+  \clearpage
+}

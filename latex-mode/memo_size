@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: memo size
+# key: memo_size
+# group: LaTeX
+# type: snippet
+# --
+
+%%% Font:
+{\tiny tiny}
+{\scriptsize scriptsize}
+{\footnotesize footnotesize}
+{\small small}
+{\normalsize normalsize}
+{\large large}
+{\Large Large}
+{\LARGE LARGE}
+{\huge huge}
+{\Huge Huge} \\\\
+
+%%% Paper:
+% letterpaper (8.5in × 11in)
+% legalpaper (8.5in × 14in)
+% executivepaper (7.25in × 10.5in)
+% A4 (210mm × 297mm)
+% A5 (148mm × 210mm)
+% B5 (176mm × 250mm)
+
+%%% width:
+% \linewidth : width of the local text block (local to the current environment)
+% \textwidth : width of text block (constant, global)
+% \baselineskip : longueur qui correspond à un saut de ligne
+% => https://en.wikibooks.org/wiki/LaTeX/Lengths

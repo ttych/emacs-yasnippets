@@ -1,0 +1,60 @@
+# -*- mode: snippet -*-
+# name: book documentclass
+# key: book
+# group: LaTeX
+# type: snippet
+# --
+\documentclass[${1:a4paper}${2:, 12pt}]{book}
+
+\title{${3:Book Title}}
+
+\author{${4:Firstname \textsc{Lastname} \\ Profession}}
+
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\frontmatter
+
+\chapter{Dedication}
+
+\chapter{Copyright}
+
+\chapter{Acknowledgements}
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+\mainmatter
+
+$0
+
+\part{The first part}
+
+\chapter{Chapter one}
+
+\chapter{Chapter two}
+
+\part{Last part}
+
+\chapter{Chapter three}
+
+
+\appendix
+
+\chapter{First and only appendix}
+
+
+\backmatter
+
+\chapter{Bibliography}
+
+\chapter{Other titles in this collection}
+
+\end{document}

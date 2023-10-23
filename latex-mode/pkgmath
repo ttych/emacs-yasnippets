@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: usepackage math pack
+# key: pkgmath
+# group: LaTeX
+# type: snippet
+# --
+\usepackage{amsmath, amsfonts, amssymb}
+% add \everymath{\displaystyle} after \begin{document}
+$0

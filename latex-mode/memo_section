@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: memo section
+# key: memo_section
+# group: LaTeX
+# type: snippet
+# --
+\part{titre}             % report
+\chapter{titre}          % report, book
+\section{titre}          %
+\subsection{titre}       %
+\subsubsection{titre}    %
+\paragraph{titre}        %
+\subparagraph{titre}     %

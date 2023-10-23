@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: texttt
+# key: ttt
+# group: LaTeX
+# type: snippet
+# --
+\texttt{$1}$0

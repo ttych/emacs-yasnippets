@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: \definecolor
+# key: definecolor
+# group: LaTeX
+# type: snippet
+# --
+\definecolor{${1:color_name}}{${2:RGB}}{${3:128,128,0}}

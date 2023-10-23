@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: page setcounter
+# key: forcepage
+# group: LaTeX
+# type: snippet
+# --
+\clearpage\setcounter{page}{${1:2}}
+$0

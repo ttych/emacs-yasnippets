@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: textsc
+# key: tsc
+# group: LaTeX
+# type: snippet
+# --
+\textsc{$1}$0

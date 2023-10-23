@@ -1,11 +1,29 @@
 # -*- mode: snippet -*-
 # name: full template of report class
 # key: report
+# group: LaTeX
+# type: snippet
 # --
 \documentclass[${1:a4paper}${2:, 12pt}]{report}
 
-\author{$3}
+\title{${3:Report Title}}
+
+\author{${4:Firstname \textsc{Lastname} \\ Profession}}
+
+\date{\today}
+
 
 \begin{document}
+
+\maketitle
+
+% \renewcommand{\abstractname}{\Large{}\textbf{Résumé}}
+\begin{abstract}
+...
+\end{abstract}
+
+% \clearpage\setcounter{page}{2}
+
 $0
+
 \end{document}

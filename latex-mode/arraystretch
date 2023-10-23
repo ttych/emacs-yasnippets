@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: arraystretch
+# key: arraystretch
+# group: LaTeX
+# type: snippet
+# --
+\renewcommand{\arraystretch}{${1:1.3}}
+$0

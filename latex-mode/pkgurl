@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: usepackage url
+# key: pkgurl
+# group: LaTeX
+# type: snippet
+# --
+\usepackage[hyphens]{url}
+$0

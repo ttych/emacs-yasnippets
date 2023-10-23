@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: textsf
+# key: tsf
+# group: LaTeX
+# type: snippet
+# --
+\textsf{$1}$0

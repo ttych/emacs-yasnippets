@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: pkg graphics
+# key: pkggraphics
+# group: LaTeX
+# type: snippet
+# --
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+$0

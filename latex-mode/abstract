@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: abstract
+# key: abstract
+# group: LaTeX
+# type: snippet
+# --
+\renewcommand{\abstractname}{\Large{}\textbf{${2:Résumé}}}
+\begin{abstract}
+$0
+\end{abstract}

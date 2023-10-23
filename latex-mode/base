@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: base document
+# key: base
+# group: LaTeX
+# type: snippet
+# --
+\documentclass[${1:a4paper}${2:, 12pt}]{${3:article}}
+
+\title{${4:Document Title}}
+
+\author{${5:Firstname} \textsc{${6:Lastname}} \\ ${7:Profession}}
+
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+$0
+
+\end{document}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: itemize
+# key: item
+# group: LaTeX
+# type: snippet
+# --
+\item${1:[${2:--}]} $0

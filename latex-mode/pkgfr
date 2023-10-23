@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: usepackage FR pack
+# key: pkgfr
+# group: LaTeX
+# type: snippet
+# --
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+$0

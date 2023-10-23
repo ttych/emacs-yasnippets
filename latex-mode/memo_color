@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: memo color
+# key: memo_color
+# group: LaTeX
+# type: snippet
+# --
+%%% commands:
+% \textcolor{color}{text}
+% \textcolor[model]{color_code}{text}
+%
+% \definecolor{name}{model}{color_code}
+%
+%%% models
+% rgb : red-green-blue decimal [0-1] : [rgb]{0.5,0.5,0}
+% RGB : red-green-blue integer [0-255] : [RGB]{128,128,0}
+% HTML : red-green-blue hex [00-FF] : [HTML]{808000}
+% hsb : hue-saturation-brightness decimal [0-1] : [hsb]{0.17,1,0.5}
+% cmyk : cyan-magenta-yellow-black decimal [0,1] : [cmyk]{0,0.17,0.67,0.33}
+% gray : gray level decimal [0,1] : [gray]{0.5}
