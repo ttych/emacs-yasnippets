@@ -1,0 +1,45 @@
+# -*- mode: snippet -*-
+# name: ADR Michael Nygard
+# key: adr_mn
+# group: ADR markdown
+# type: snippet
+# --
+# ${1:0}. ${2:Record architecture decision}
+
+Date: `(format-time-string "%Y-%m-%d")`
+
+## Status
+$0
+Proposed.
+Accepted.
+Rejected.
+Deprecated.
+Superseded by XXX.
+Supersedes XXX.
+Amended by XXX.
+Amends XXX.
+
+## Context
+
+What is the issue that we're seeing that is motivating this decision or change?
+
+- Explain your organization's situation and business priorities.
+
+- Include rationale and considerations based on social and skills makeups of your teams.
+
+- Include pros and cons that are relevant, and describe them in terms that align with your needs and goals.
+
+
+## Decision
+
+What is the change that we're proposing and/or doing?
+
+## Consequences
+
+What becomes easier or more difficult to do because of this change?
+
+- Explain what follows from making the decision. This can include the effects, outcomes, outputs, follow ups, and more.
+
+- Include information about any subsequent ADRs. It's relatively common for one ADR to trigger the need for more ADRs, such as when one ADR makes a big overarching choice, which in turn creates needs for more smaller decisions.
+
+- Include any after-action review processes. It's typical for teams to review each ADR one month later, to compare the ADR information with what's happened in actual practice, in order to learn and grow.

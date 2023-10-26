@@ -1,0 +1,26 @@
+# -*- mode: snippet -*-
+# name: ADR Y
+# key: adr_y
+# group: ADR markdown
+# type: snippet
+# --
+In the context of <use case/user story u>,
+facing <concern c>
+we decided for <option o>
+to achieve <quality q>,
+accepting <downside d>.
+
+In the context of <use case/user story u>,
+facing <concern c>
+we decided for <option o> and neglected <other options>,
+to achieve <system qualities/desired consequences>,
+accepting <downside d/undesired consequences>,
+because <additional rationale>.
+
+
+1. context: functional requirement (story, use case) or arch. component,
+2. facing: non-functional requirement, for instance a desired quality,
+3. we decided: decision outcome (arguably the most important part),
+4. and neglected alternatives not chosen (not to be forgotten!),
+5. to achieve: benefits, the full or partial satisfaction of requirement(s),
+6. accepting that: drawbacks and other consequences, for instance impact on other properties/context and effort/cost (both short term and long term).
