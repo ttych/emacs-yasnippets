@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to markdown-mode
+# group: mode
+# key: tomd
+# type: command
+# --
+(markdown-mode)
