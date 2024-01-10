@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# uuid: task_bump
+# name: rake bump task
+# key: task_bump
+# group: Rakefile
+# type: snippet
+# --
+require 'bump/tasks'
+$0
