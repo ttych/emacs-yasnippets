@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: echo2()
+# key: echo2_
+# group: shell utils
+# type: snippet
+# --
+echo2()
+{
+  echo >&2 "$@"
+}
+$0

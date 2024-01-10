@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: getopts block
-# key: opts
+# key: getopts_
 # group: shell
 # --
 OPTIND=1
