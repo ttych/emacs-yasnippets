@@ -4,7 +4,7 @@
 # group: LaTeX
 # type: snippet
 # --
-\documentclass[${1:a4paper}${2:, 10pt}]{letter}
+\documentclass[${1:a4paper}${2:, 11pt}]{letter}
 
 \address{${3:1234 Fake Avenue\\ Wonderland, 12555}}
 
@@ -14,8 +14,6 @@
 
 \begin{letter}
 
-% \renewcommand{\today}{12th of October of 1492}
-
 {${5:Dr.~Anything \\ University of Nowhere\\ 66 Sesame Street\\ Wonderland, 45888}}
 
 \opening{Appreciated Anything,}
@@ -24,7 +22,7 @@ $0
 I write you a letter, and this is the body of the
 letter.
 
-\closing{I look forward to your reply,}
+\closing{Veuillez agréer, Madame, Monsieur, l’expression de ma considération distinguée.}
 
 \end{letter}
 

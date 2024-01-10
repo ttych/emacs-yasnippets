@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: usepackage geometry
+# key: pkgeometry
+# group: LaTeX
+# type: snippet
+# --
+\usepackage[${1:margin=2.5cm}${2:${3:, bottom=2.5cm}${4:, left=2cm}${5:, right=2cm}${6:, paperwidth=21cm, paperheight=29.7cm}}]{geometry}
+$0
