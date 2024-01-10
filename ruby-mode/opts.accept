@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: opts.accept
+# key: opts.accept
+# group: ruby
+# type: snippet
+# --
+opts.accept(${1:Type}) do |arg|
+  $0
+end

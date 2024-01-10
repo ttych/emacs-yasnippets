@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# name: OptionParser.new
+# key: OptionParser.new
+# group: ruby
+# type: snippet
+# --
+require 'optparse'
+
+options = {}
+option_parser = OptionParser.new do |opts|
+  executable_name = File.basename($PROGRAM_NAME)
+  opts.banner = "Documentation.\n" \
+                "\n" \
+                "Usage: #{executable_name} [options] args"
+
+  opts.on("-s","--[no-]switch", 'documentation') do |switch|
+    options[:switch] = switch
+  end
+
+  opts.on("-f FLAG", '--flag', 'documentation') do |flag|
+    options[:flag] = flag
+  end
+
+  opts.on("-o [OPTIONAL]", '--optional', 'documentation') do |optional|
+    options[:optional] = optional
+  end
+end
+
+option_parser.parse!
+puts options.inspect
+$0

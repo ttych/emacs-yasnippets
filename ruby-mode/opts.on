@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: opts.on
+# key: opts.on
+# group: ruby
+# type: snippet
+# --
+opts.on("-${1:short}", "--${2:long}"${3:, /^.*$/}${4:, 'documentation'}) do |$2|
+  ${5:options[:$2] = $2}
+  $0
+end
