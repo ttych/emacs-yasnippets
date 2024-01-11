@@ -1,16 +1,11 @@
 # -*- mode: snippet -*-
-# name: man structure
-# key: man_
+# name: man ronn structure
+# key: ronn_
 # group: man
 # type: snippet
 # --
 ${1:TITLE}
 ${1:$(make-string (string-width yas-text) ?\=)}
-
-## NAME
-
-The name of the command or function, followed by a one-line description of what
-it does.
 
 ## SYNOPSIS
 
