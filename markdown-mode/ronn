@@ -9,24 +9,60 @@ ${1:$(make-string (string-width yas-text) ?\=)}
 
 ## SYNOPSIS
 
-In the case of a command, a formal description of how to run it and what command
-line options it takes. For program functions, a list of the parameters the
-function takes and which header file contains its declaration.
+In the case of a command, a formal description of how to invoke it and what
+command line options it takes. For program functions, a list of the parameters
+the function takes and which header file contains its declaration.
 
 ## DESCRIPTION
 
-A textual description of the functioning of the command or function.
-
-## FILES
+A longer description of what your app does, why the user might use it, and any
+additional details. This section should be targeted at new users and written to
+help them understand how to use your app.
 
 ## OPTIONS
 
-## EXIT STATUS, RETURN VALUE, ENVIRONMENT, BUGS, REPORTING BUGS, HISTORY, COPYRIGHT, AUTHOR
+A bullet list documenting each option. This is a chance to explain in more
+detail how the options work and what effect they have on your app’s behavior.
 
 ## EXAMPLES
 
-Some examples of common usage.
+One or more examples of using the app, including brief text explaining each
+example.
+
+## FILES
+
+A list of files on the filesystem that the app uses.
+
+## ENVIRONMENT
+
+A bullet list of any environment variables that affect the app’s behavior.
+
+## EXIT STATUS, RETURN VALUE
+
+List of exit status / return value, and their meanings.
+
+## BUGS
+
+Known bugs or odd behaviors.
+
+## REPORTING BUGS
+
+Technical procedure to report a bugs or an odd behaviors.
+
+## LICENSE
+
+The name of the license and a reference to the full license text (you do not
+need to reproduce the entire license here).
+
+## AUTHOR
+
+The authors of your app and their email addresses.
+
+## COPYRIGHT
+
+The copyright information for your app.
 
 ## SEE ALSO
 
-A list of related commands or functions.
+Links to other commands, functions or places on the Web that are relevant for
+your app.
