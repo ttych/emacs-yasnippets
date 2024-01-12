@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: Rake task cucumber
+# key: task_cucumber
+# group: Rakefile
+# type: snippet
+# --
+require 'cucumber'
+require 'cucumber/rake/task'
+
+Cucumber::Rake::Task.new(:features) do |t|
+  t.cucumber_opts = "--format pretty"
+end
+$0
