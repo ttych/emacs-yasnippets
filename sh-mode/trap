@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: trap
+# key: trap
+# group: sh
+# type: snippet
+# --
+${1:interrupt_handler}()
+{
+    ${3:echo interrupt_handler}
+}
+
+trap $1 ${2:HUP INT QUIT ABRT TERM}
+$0

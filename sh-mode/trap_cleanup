@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: trap cleanup
+# key: trap_cleanup
+# group: sh
+# type: snippet
+# --
+
+trap_cleanup()
+{
+    ${1:echo trap_cleanup}
+}
+
+trap trap_cleanup EXIT HUP INT QUIT ABRT TERM
+$0
