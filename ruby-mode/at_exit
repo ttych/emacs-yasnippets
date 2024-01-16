@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: at_exit
+# key: at_exit
+# group: ruby
+# type: snippet
+# --
+at_exit {
+  $1
+}
+$0

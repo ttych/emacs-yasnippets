@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: trap
+# key: trap
+# group: ruby
+# type: snippet
+# --
+trap(${1:INT) { |signo|
+  ${2:puts Signal.signame(signo)}
+}
