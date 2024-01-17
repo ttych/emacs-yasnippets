@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: shebang
+# key: #!
+# group: script
+# type: snippet
+# --
+#!/usr/bin/env ${1:false}
+$0
