@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: now day
+# key: nowd
+# group: time
+# type: snippet
+# contributor: ttyc
+# --
+`(format-time-string "%Y-%m-%d")`

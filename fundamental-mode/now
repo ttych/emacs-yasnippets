@@ -5,4 +5,4 @@
 # type: snippet
 # contributor: ttych
 # --
-`(current-time-string)`
+`(format-time-string "%Y-%m-%dT%H:%M:%S%:z")`
