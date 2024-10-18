@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: s()
+# key: s()
+# group: ssh
+# type: snippet
+# --
+s()
+{
+    ssh \
+        -o StrictHostKeyChecking=no \
+        -o CheckHostIP=no \
+        -o ConnectTimeout=10 \
+        -o PasswordAuthentication=no \
+        "\$@"
+}
+
+$0
