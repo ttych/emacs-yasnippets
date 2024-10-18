@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: trap cleanup
-# key: trap_cleanup
+# name: trap cleanup()
+# key: trap_cleanup()
 # group: sh
 # type: snippet
 # --

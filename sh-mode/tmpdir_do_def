@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: tmpdir_do()
-# key: tmpdir_do_
+# key: tmpdir_do()
 # group: shell utils
 # type: snippet
 # --

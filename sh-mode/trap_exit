@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: trap exit
-# key: trap_exit
+# name: trap exit()
+# key: trap_exit()
 # group: sh
 # type: snippet
 # --

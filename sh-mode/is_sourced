@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: check is_sourced
-# key: is_sourced
+# key: is_sourced()
 # group: check
 # --
 is_sourced()
