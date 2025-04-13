@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: deep_dup
+# key: deep_dup()
+# group: ruby
+# type: snippet
+# --
+def deep_dup(obj)
+  case obj
+  when Hash
+    obj.each_with_object({}) { |(k, v), h| h[k] = deep_dup(v) }
+  when Array
+    obj.map { |e| deep_dup(e) }
+  else
+    obj.dup rescue obj
+  end
+end
+$0

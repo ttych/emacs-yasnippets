@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: deep_dup_marshal
+# key: deep_dup_marshal()
+# group: ruby
+# type: snippet
+# --
+def deep_dup_marshal(obj)
+  Marshal.load(Marshal.dump(obj))
+end
+$0
