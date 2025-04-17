@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: cat2()
+# key: cat2()
+# group: shell utils
+# type: snippet
+# --
+cat2()
+{
+  cat >&2 "$@"
+}
+$0
