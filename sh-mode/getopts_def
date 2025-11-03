@@ -4,9 +4,10 @@
 # group: shell
 # --
 OPTIND=1
-while getopts ${1::h} ${2:opt}; do
+while getopts ${1::hx} ${2:opt}; do
 $>    case \$$2 in
-$>        ${3:h) ;;}
+$>        ${3:h) usage ; exit 0 ;;}
+$>        ${4:x) set -x ;;}
 $>    esac
 done
 shift $(($OPTIND - 1))

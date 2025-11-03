@@ -8,9 +8,10 @@
 usage()
 {
     cat <<EOF
-usage is:
-  \$0 ...
+Usage: \$0 ...
+Options:
+    -h      : help
+    -x      : debug
 EOF
-    exit 1
 }
 $0
