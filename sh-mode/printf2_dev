@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: printf2()
+# key: printf2()
+# group: shell utils
+# type: snippet
+# --
+printf2()
+{
+    printf >&2 "$@"
+}
+$0
