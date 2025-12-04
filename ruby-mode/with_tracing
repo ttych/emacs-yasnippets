@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: with_tracing
+# key: with_tracing
+# group: debug
+# type: snippet
+# --
+def with_tracing
+  trace = TracePoint.trace(:call, :return) do |tp|
+    indent = "  " * caller.size
+    puts "#{indent}#{tp.event}: #{tp.defined_class}##{tp.method_id}"
+  end
+
+  yield
+ensure
+  trace.disable
+end
+
+# with_tracing do
+#   ...
+# end

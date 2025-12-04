@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: set_trace_func
+# key: set_trace_func
+# group: debug
+# type: snippet
+# --
+set_trace_func(proc { |event, file, line, id, binding, classname|
+  puts "#{event}: #{classname}##{id} at #{file}:#{line}"
+})
+
+$0
+
+set_trace_func(nil)

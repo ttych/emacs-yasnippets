@@ -1,10 +1,21 @@
 # -*- mode: snippet -*-
-# name: trace with set_trace_func
+# name: trace with TracePoint
 # key: trace
 # group: debug
+# type: snippet
 # --
-# proc_object = proc do |event, file, line, id, binding, klass|
-#   puts "#{event} in #{file}/#{line} #{id} #{klass}"
-# end
+trace = TracePoint.trace(:call, :return, :raise) do |tp|
+  trace_message = "#{tp.defined_class}##{tp.method_id} at #{tp.path}:#{tp.lineno}"
+  case tp.event
+  when :call
+    puts "→ #{trace_message}"
+  when :return
+    puts "← #{trace_message}"
+  when :raise
+    puts "! #{trace_message} raised #{tp.raised_exception}"
+  end
+end
 
-# set_trace_func(proc_object)
+$0
+
+# trace.disable
