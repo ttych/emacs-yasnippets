@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to yasnippet-mode
+# key: toyas
+# group: mode
+# type: command
+# --
+(snippet-mode)
