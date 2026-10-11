@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: to yaml-mode
+# group: mode
+# key: toyaml
+# type: command
+# --
+(yaml-mode)
